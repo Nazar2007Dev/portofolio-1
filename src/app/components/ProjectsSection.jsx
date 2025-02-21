@@ -52,10 +52,10 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "Led button controller",
+    description: "App controller for on or off the led using mit app invertor",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/"
   },
