@@ -9,10 +9,19 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <p className="text-base lg:text-lg">
+          I am a vocational school student majoring in Software Engineering,
+          with a strong interest in software development. I have experience
+          working with several programming languages such as JavaScript, Python,
+          HTML, and CSS. Additionally, I am familiar with frameworks like Vue,
+          React, and Laravel. I am a quick learner and always eager to expand my
+          knowledge and skills. I am a team player and excited to collaborate
+          with others to create amazing applications.
+        </p>
+
         <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>Python</li>
+        <li>Vue</li>
         <li>JavaScript</li>
         <li>React</li>
       </ul>
@@ -63,17 +72,10 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/nazar.jpg" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-4">About Us</h2>
+
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
