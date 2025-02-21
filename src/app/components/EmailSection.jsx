@@ -13,7 +13,7 @@ const EmailSection = () => {
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
-      message: e.target.message.value,
+      message: e.target.message.value
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -24,10 +24,10 @@ const EmailSection = () => {
       method: "POST",
       // Tell the server we're sending JSON.
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       // Body of the request is the JSON data we created above.
-      body: JSONdata,
+      body: JSONdata
     };
 
     const response = await fetch(endpoint, options);
@@ -84,7 +84,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="nazar@gmail.com"
               />
             </div>
             <div className="mb-6">
