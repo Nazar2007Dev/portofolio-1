@@ -32,8 +32,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>deskripsi feo</li>
       </ul>
     )
   },
@@ -42,8 +41,23 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <p>
+          I'm Muhammad Daffa Habibi Harahap, a vocational high school student
+          majoring in Visual Communication Design (DKV). My focus is on
+          illustration, animation, motion graphics, and graphic design, where I
+          explore various techniques and styles to create visual content. I
+          enjoy experimenting with different creative approaches to improve my
+          skills and better understand the principles of design and
+          storytelling. Through my studies, I aim to develop a deeper knowledge
+          of visual communication and how it can be used effectively in
+          different media.
+        </p>
+        <li>Adobe Illustrator</li>
+        <li>Adobe After Effects</li>
+        <li>Adobe Premiere</li>
+        <li>Adobe Photoshop</li>
+        <li>Clip Studio Paint</li>
+        <li>Canva</li>
       </ul>
     )
   },
@@ -52,8 +66,7 @@ const TAB_DATA = [
     id: "unk",
     content: (
       <ul className="list-disc pl-2">
-        <li>...</li>
-        <li>...</li>
+        <li>deskripsi sheira</li>
       </ul>
     )
   }
@@ -96,14 +109,14 @@ const AboutSection = () => {
               active={tab === "certifications"}
             >
               {" "}
-              unk{" "}
+              Daffa{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("unk")}
               active={tab === "unk"}
             >
               {" "}
-              Daffa{" "}
+              Sheira{" "}
             </TabButton>
           </div>
           <div className="mt-8">

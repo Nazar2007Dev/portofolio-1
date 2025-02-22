@@ -23,12 +23,12 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Nazar",
-                1000,
+                2000,
                 "Feo",
                 1000,
                 "Daffa",
                 1000,
-                "Unknown",
+                "Sheira",
                 1000,
                 "Metschoo Student",
                 1000
@@ -64,7 +64,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full [#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full [#181818] w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] relative">
             <Image
               src="/images/smk.png"
               alt="hero image"

@@ -10,7 +10,7 @@ const projectsData = [
     title: "React Portfolio Website",
     description: "Website for portofolio",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -19,16 +19,16 @@ const projectsData = [
     title: "Figma Web design",
     description: "UI For e-commerce website Playstation Store",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Lays Chips adv Video",
+    description: "Create f&b adv video using Adobe After Effect",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -43,10 +43,10 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    title: "Flappy bee game",
+    description: "A 2D game using construct 2",
+    image: "/images/projects/5.jpg",
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -55,7 +55,7 @@ const projectsData = [
     title: "Led button controller",
     description: "App controller for on or off the led using mit app invertor",
     image: "/images/projects/6.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -64,7 +64,7 @@ const projectsData = [
     title: "Food And Beverages",
     description: "Website for ordering food in our school restaurant",
     image: "/images/projects/7.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -73,10 +73,41 @@ const projectsData = [
     title: "Education",
     description: "Website for studying in our school",
     image: "/images/projects/8.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Nazar"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+  // Bagian Feo id nya dari 11-20 ya
+  {
+    id: 11,
+    title: "",
+    description: "silahkan isi project nya feo",
+    image: "/images/projects/.png",
+    tag: ["All", "Feo"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+  //bagian daffa id nya dari 21-30
+  {
+    id: 21,
+    title: "Stationary Brand Identity",
+    description: "description Project Daffa 1",
+    image: "/images/projects/21.png",
+    tag: ["All", "Daffa"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+  {
+    id: 22,
+    title: "E-book Class Reflection",
+    description: "description Project Daffa 2",
+    image: "/images/projects/22.jpg",
+    tag: ["All", "Daffa"],
     gitUrl: "/",
     previewUrl: "/"
   }
+
+  //bagian sheira id nya dari 31-40
 ];
 
 const ProjectsSection = () => {
@@ -110,13 +141,23 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Nazar"
+          isSelected={tag === "Nazar"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Feo"
+          isSelected={tag === "Feo"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Daffa"
+          isSelected={tag === "Daffa"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Sheira"
+          isSelected={tag === "Sheira"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
