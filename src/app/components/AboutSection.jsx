@@ -2,7 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import Link from 'next/link'; // Import Link for navigation
+import Link from "next/link"; // Import Link for navigation
 
 const TAB_DATA = [
   {
@@ -29,14 +29,24 @@ const TAB_DATA = [
         </ul>
         <div className="socials flex flex-row gap-4 mt-4">
           <Link href="https://github.com/Nazar2007Dev" passHref>
-            <Image src="/images/github-icon.svg" alt="GitHub" width={45} height={45} />
+            <Image
+              src="/images/github-icon.svg"
+              alt="GitHub"
+              width={45}
+              height={45}
+            />
           </Link>
           <Link href="http://www.instagram.com/nazarrr__7" passHref>
-            <Image src="/images/ig.png" alt="Instagram" width={48} height={48} />
+            <Image
+              src="/images/ig.png"
+              alt="Instagram"
+              width={48}
+              height={48}
+            />
           </Link>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Feodora",
@@ -48,14 +58,18 @@ const TAB_DATA = [
         <p>Student | SMK Pariwisata Metland School | IT Major</p>
         <br />
         <p>
-          I have a strong passion for web development, with experience in HTML, CSS, Kotlin, and Python. 
-          While I enjoy designing more than coding, I’m always eager to learn and explore new technologies. 
-          I love experimenting with creative ideas and finding ways to make websites both visually appealing and functional.
+          I have a strong passion for web development, with experience in HTML,
+          CSS, Kotlin, and Python. While I enjoy designing more than coding, I’m
+          always eager to learn and explore new technologies. I love
+          experimenting with creative ideas and finding ways to make websites
+          both visually appealing and functional.
         </p>
         <br />
         <p>
-          In addition to my technical skills, I have a strong command of English and take great pride in my proficiency. 
-          My fluency allows me to communicate effectively and engage with a wide range of content, making learning and collaboration easier.
+          In addition to my technical skills, I have a strong command of English
+          and take great pride in my proficiency. My fluency allows me to
+          communicate effectively and engage with a wide range of content,
+          making learning and collaboration easier.
         </p>
         <br />
         <ul className="list-disc pl-2">
@@ -67,11 +81,16 @@ const TAB_DATA = [
         </ul>
         <div className="socials flex flex-row gap-4 mt-4">
           <Link href="https://github.com/yoamiw" passHref>
-            <Image src="/images/github-icon.svg" alt="GitHub" width={45} height={45} />
+            <Image
+              src="/images/github-icon.svg"
+              alt="GitHub"
+              width={45}
+              height={45}
+            />
           </Link>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Daffa",
@@ -80,8 +99,10 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          I'm Muhammad Daffa Habibi Harahap, a vocational high school student majoring in Visual Communication Design (DKV). 
-          My focus is on illustration, animation, motion graphics, and graphic design, where I explore various techniques and styles to create visual content.
+          IM Muhammad Daffa Habibi Harahap, a vocational high school student
+          majoring in Visual Communication Design (DKV). My focus is on
+          illustration, animation, motion graphics, and graphic design, where I
+          explore various techniques and styles to create visual content.
         </p>
         <ul className="list-disc pl-2">
           <li>Adobe Illustrator</li>
@@ -93,11 +114,16 @@ const TAB_DATA = [
         </ul>
         <div className="socials flex flex-row gap-4 mt-4">
           <Link href="https://instagram.com/lemonteaweirdo" passHref>
-            <Image src="/images/ig.png" alt="Instagram" width={48} height={48} />
+            <Image
+              src="/images/ig.png"
+              alt="Instagram"
+              width={48}
+              height={48}
+            />
           </Link>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Sheira",
@@ -105,15 +131,30 @@ const TAB_DATA = [
     image: "/images/sheira.jpeg",
     content: (
       <div>
-        <p>I am a student from Metland School, majoring in Accounting. I have a passion to further explore the fields of finance or taxation. On the other hand, I have a passion for traditional dance, and I find it enjoyable to learn about various dances from different regions. Additionally, I have participated in aritmetika competitions and have received several awards and achieved a Grade 1 result.</p>
+        <p>
+          I am a student from Metland School, majoring in Accounting. I have a
+          passion to further explore the fields of finance or taxation. On the
+          other hand, I have a passion for traditional dance, and I find it
+          enjoyable to learn about various dances from different regions.
+          Additionally, I have participated in aritmetika competitions and have
+          received several awards and achieved a Grade 1 result.
+        </p>
         <div className="socials flex flex-row gap-4 mt-4">
-          <Link href= "https://www.instagram.com/seraa_ca?igsh=MXh5YmNjNzRna2lvbQ==" passHref>
-            <Image src="/images/ig.png" alt="Instagram" width={48} height={48} />
+          <Link
+            href="https://www.instagram.com/seraa_ca?igsh=MXh5YmNjNzRna2lvbQ=="
+            passHref
+          >
+            <Image
+              src="/images/ig.png"
+              alt="Instagram"
+              width={48}
+              height={48}
+            />
           </Link>
         </div>
       </div>
-    ),
-  },
+    )
+  }
 ];
 
 const AboutSection = () => {
@@ -131,7 +172,9 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* Dynamically change the image based on selected tab */}
         <Image
-          src={TAB_DATA.find((t) => t.id === tab)?.image || "/images/default.jpg"}
+          src={
+            TAB_DATA.find((t) => t.id === tab)?.image || "/images/default.jpg"
+          }
           width={500}
           height={500}
           alt="Profile"
@@ -162,4 +205,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
