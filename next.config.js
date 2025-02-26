@@ -6,3 +6,8 @@ module.exports = {
     domains: ["example.com"]
   }
 };
+module.exports = {
+  images: {
+    unoptimized: true
+  }
+};
