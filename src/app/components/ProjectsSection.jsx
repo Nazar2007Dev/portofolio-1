@@ -37,7 +37,7 @@ const projectsData = [
     title: "Food Ordering Application",
     description: "Project 4 description",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Nazar"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -80,13 +80,74 @@ const projectsData = [
   // Bagian Feo id nya dari 11-20 ya
   {
     id: 11,
-    title: "",
-    description: "silahkan isi project nya feo",
-    image: "/images/projects/.png",
+    title: "Automatic Night Lamp",
+    description: "A night lamp that will be activated by sound.",
+    image: "/images/projects/9.jpeg",
     tag: ["All", "Feo"],
     gitUrl: "/",
     previewUrl: "/"
   },
+
+  {
+    id: 12,
+    title: "Electronics AD",
+    description: "An ad for electronics made in Adobe After Effects.",
+    image: "/images/projects/10.png",
+    tag: ["All", "Feo"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+
+  {
+    id: 13,
+    title: "Private Web Design",
+    description: "A private web design",
+    image: "/images/projects/11.png",
+    tag: ["All", "Feo"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+  
+  {
+    id: 14,
+    title: "Smart Home",
+    description: "A project with my other friends, a house that contains AI technologies",
+    image: "/images/projects/12.jpeg",
+    tag: ["All", "Feo"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+
+  {
+  id: 15,
+    title: "Invitation",
+    description: "An E-invitation for a school event.",
+    image: "/images/projects/13.png",
+    tag: ["All", "Feo"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+
+  {
+    id: 16,
+      title: "Music App Design",
+      description: "A music app design made in figma",
+      image: "/images/projects/14.png",
+      tag: ["All", "Feo"],
+      gitUrl: "/",
+      previewUrl: "/"
+    },
+
+    {
+      id: 17,
+        title: "News App",
+        description: "A news app for Metland School",
+        image: "/images/projects/15.png",
+        tag: ["All", "Feo"],
+        gitUrl: "/",
+        previewUrl: "/"
+      },
+
   //bagian daffa id nya dari 21-30
   {
     id: 21,
@@ -105,9 +166,40 @@ const projectsData = [
     tag: ["All", "Daffa"],
     gitUrl: "/",
     previewUrl: "/"
-  }
+  },
 
   //bagian sheira id nya dari 31-40
+
+  {
+    id: 31,
+    title: "Beef-Filled Spring Rolls",
+    description: "I'd like to introduce you to a delicious Indonesian snack, beef-filled spring rolls served with a savory sauce. These crispy spring rolls are filled with tender beef and served with a side of tangy sauce that complements the flavors perfectly. It's a popular snack in Indonesia, and once you try it, you'll understand why it's a favorite among locals and visitors alike.",
+    image: "/images/projects/16.jpeg",
+    tag: ["All", "Sheira"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+
+  {
+    id: 32,
+    title: "Purple Sweet Potato Balls",
+    description: "Indulge in the sweet delight of our Purple Sweet Potato Balls, coated in a crunchy breadcrumb layer and filled with a rich, velvety chocolate center. These bite-sized treats are a perfect blend of textures and flavors, with the natural sweetness of the purple sweet potato complemented by the decadence of the chocolate filling. A delightful dessert or snack that's sure to satisfy your sweet tooth!",
+    image: "/images/projects/17.jpeg",
+    tag: ["All", "Sheira"],
+    gitUrl: "/",
+    previewUrl: "/"
+  },
+
+  {
+    id: 32,
+    title: "Wins",
+    description: "",
+    image: "/images/projects/23.jpeg",
+    tag: ["All", "Sheira"],
+    gitUrl: "/",
+    previewUrl: "/"
+  }
+  
 ];
 
 const ProjectsSection = () => {
@@ -123,6 +215,15 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
+  const shortenDescription = (project) => {
+    if (tag === "All" && project.tag.includes("Sheira")) {
+      return project.description.length > 100
+        ? project.description.substring(0, 100) + "..."
+        : project.description;
+    }
+    return project.description;
+  };
+
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 }
@@ -131,7 +232,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        Our Projects
+        Our Projects & Achievements
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
@@ -172,7 +273,7 @@ const ProjectsSection = () => {
             <ProjectCard
               key={project.id}
               title={project.title}
-              description={project.description}
+              description={shortenDescription(project)} // Use the shortenDescription function
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
